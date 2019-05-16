@@ -1,0 +1,58 @@
+<!-- login123.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>身份认证系统</title>
+<style type="text/css">
+* {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px auto;
+}
+</style>
+</head>
+<body>
+  <div>
+    <div style="width: 75%;">
+      <h1>身份认证系统</h1>
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <td>用户名：</td>
+              <td><input type="text" id="user" name="user" /></td>
+            </tr>
+            <tr>
+              <td>密码：</td>
+              <td><input type="text" id="password" name="user" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="登录"
+                onclick="verify()" /> <input type="reset" value="清空" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+	function verify() {
+		if (document.getElementById("user").value == "") {
+			alert("请输入用户名！");
+		} else if (document.getElementById("password").value == "") {
+			alert("请输入密码！");
+		} else if (document.getElementById("user").value == "admin"
+				&& document.getElementById("password").value == "admin") {
+			alert("登录成功！");
+		} else {
+			alert("登陆错误：用户名/密码错误！");
+		}
+	}
+</script>
+</html>
